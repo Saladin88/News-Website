@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Header from '@/components/Header.jsx';
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <div>
+        <Header/>
+        Home
+    </div>
   )
 }
