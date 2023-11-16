@@ -1,16 +1,28 @@
 import React from 'react';
 import styles from '@/styles/Header.module.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faUser} from '@fortawesome/free-regular-svg-icons';
+import {faCloud} from '@fortawesome/free-solid-svg-icons';
 
 export default function Header() {
   return (
     <div className ={styles.container}>
-      <h1 className = {styles.title}>Title</h1>
-      <div className = {styles.items}>Date</div>
-      <div className = {styles.items}>temperature</div>
-      <div className = {styles.items}>weather icon</div>
-      <div className = {styles.items}>welcome...</div>
-      <div className = {styles.items}>connexion</div>
+      <div className={styles.left}>
+      <p>Date</p>
+      <div className={styles.block}>
+        <p><FontAwesomeIcon icon={faCloud} />temperature</p>
+        
+      </div>
+      </div>
+      <h1 className={styles.title}>Zhe Journal</h1> 
+      <div className={styles.right}>
+        <p>welcome...</p>
+        <div className={styles.block}>
+          <FontAwesomeIcon icon={faUser} />
+          <span><br/>connexion</span>
+        </div>
+        <i class="fa fa-user-o" aria-hidden="true"></i>
+        </div>
     </div>
   )
 }
